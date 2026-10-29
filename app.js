@@ -11,9 +11,9 @@
      ============================================================ */
   var HERO_VIDEO = {
     // Placeholder (ships with this preview):
-    webm: 'media/hero-placeholder.webm',
-    mp4: 'media/hero-placeholder.mp4',
-    poster: 'media/hero-poster.jpg'
+    webm: 'media/hero.webm',
+    mp4: 'media/hero.mp4',
+    poster: 'media/hero-poster-real.jpg'
     // Real film example (after copy into media/):
     // webm: 'media/hero.webm',
     // mp4: 'media/hero.mp4',
