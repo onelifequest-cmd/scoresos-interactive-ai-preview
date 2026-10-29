@@ -5,7 +5,8 @@ Static preview only. **Do not deploy to or change live scoresos.com.**
 - Local path: `/workspace/projects/scoresos-homepage/interactive-ai-preview/`
 - noindex + `robots.txt` Disallow
 - Placeholder film: `media/hero-placeholder.{mp4,webm}` + `media/hero-poster.jpg`
-- Swap in Patrick's real video where the HTML comment says `REAL VIDEO SWAP`
+- Swap in the real video via **one config spot**: `HERO_VIDEO` at the top of `app.js`
+- Teammate delivers MP4 + WebM + poster to `/workspace/projects/scoresos-homepage/hero-video/` — copy into `media/`, then update those three paths (HTML comment also documents this)
 
 ## What's on this preview
 
@@ -41,3 +42,10 @@ No forms collect data. No analytics. No API calls.
 Public GitHub repo + Render static site (`onrender.com`), free, noindex. Sibling to `scoresos-video-hero-preview` — that older preview stays intact.
 
 Does not touch scoresos.com DNS or the Replit production app.
+
+## Live preview URL
+
+- https://scoresos-interactive-ai-preview.onrender.com
+- GitHub: https://github.com/onelifequest-cmd/scoresos-interactive-ai-preview
+
+Sibling of https://scoresos-video-hero-preview.onrender.com (kept intact).

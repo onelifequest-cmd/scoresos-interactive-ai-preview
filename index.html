@@ -19,11 +19,14 @@
   <!-- ========== HERO: full-screen video + AI layer ========== -->
   <section class="stage" id="hero" role="banner" aria-label="Score OS interactive homepage preview">
     <!--
-      REAL VIDEO SWAP:
-      Replace media/hero-placeholder.mp4 and media/hero-placeholder.webm
-      with Patrick's final hero film (same filenames, or update the <source> hrefs below).
-      Also replace media/hero-poster.jpg with a matching still from the real film.
-      Keep H.264 MP4 + WebM, 1080p, muted, looping, under ~2–4 MB if possible.
+      REAL VIDEO SWAP (one config spot):
+      Teammate delivers the real film to:
+        /workspace/projects/scoresos-homepage/hero-video/
+        (MP4 + WebM under ~8 MB + poster)
+      Then either:
+        A) Copy those files into this preview's media/ and flip HERO_VIDEO in app.js, OR
+        B) Edit only the HERO_VIDEO object at the top of app.js (paths below are fallbacks).
+      Keep H.264 MP4 + WebM, muted, looping. Prefer under ~8 MB.
     -->
     <video
       class="hero-video"

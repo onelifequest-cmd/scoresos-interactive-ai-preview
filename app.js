@@ -1,6 +1,40 @@
 (function () {
   'use strict';
 
+  /* ============================================================
+     HERO_VIDEO — ONE CONFIG SPOT for the real film.
+     Teammate drops MP4 + WebM + poster into:
+       /workspace/projects/scoresos-homepage/hero-video/
+     For this static preview (and Render), copy into ./media/ then
+     change the three paths below (or set useReal after copying as
+     media/hero.mp4, media/hero.webm, media/hero-poster.jpg).
+     ============================================================ */
+  var HERO_VIDEO = {
+    // Placeholder (ships with this preview):
+    webm: 'media/hero-placeholder.webm',
+    mp4: 'media/hero-placeholder.mp4',
+    poster: 'media/hero-poster.jpg'
+    // Real film example (after copy into media/):
+    // webm: 'media/hero.webm',
+    // mp4: 'media/hero.mp4',
+    // poster: 'media/hero-poster.jpg'
+  };
+
+  function applyHeroVideo() {
+    var video = document.getElementById('heroVideo');
+    var posterImg = document.getElementById('heroPoster');
+    if (!video) return;
+    var sources = video.querySelectorAll('source');
+    // Prefer WebM first, then MP4 — match <source> order in index.html
+    if (sources[0]) sources[0].src = HERO_VIDEO.webm;
+    if (sources[1]) sources[1].src = HERO_VIDEO.mp4;
+    video.setAttribute('poster', HERO_VIDEO.poster);
+    if (posterImg) posterImg.src = HERO_VIDEO.poster;
+    try { video.load(); } catch (e) {}
+  }
+  applyHeroVideo();
+
+
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
   var saveData = !!(conn && conn.saveData);
